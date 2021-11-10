@@ -9,10 +9,10 @@ class SearchPanel extends Component {
         }
     }
 
-    onUpdateSearch = (e) => { //Эта функция работает локально
-        const term = e.target.value; //аолучаем value, которое ввел пользователь в строку поиска
-        this.setState({term}); // Установка локального состояния term
-        this.props.onUpdateSearch(term); //Пробрасываем это состояние наверх в app.js// Эта часть приходит из компонента app.js
+    onUpdateSearch = (e) => { 
+        const term = e.target.value; 
+        this.setState({term}); 
+        this.props.onUpdateSearch(term); 
     }
 
     render() {

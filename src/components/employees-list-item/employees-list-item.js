@@ -18,7 +18,7 @@ const EmployeesListItem = (props) => {
                 <span className="list-group-item-label"
                     onClick={onToggleProp}
                     data-toggle="rise"
-                    style={{fontSize: 40, color: 'red'}}> {/*Добавление inline стилей*/} 
+                    style={{fontSize: 20, color: 'black'}}>
                         {name}
                     </span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'} />

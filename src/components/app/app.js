@@ -51,11 +51,11 @@ export default class App extends Component {
 
     onToggleProp = (id, prop) => { 
         this.setState(({data}) => ({ 
-            data: data.map(item => { //Возвращаем новый объект, у которого будет свойство data. Здесь будет формироваться новый массив за счет метода map.
-                if (item.id === id) { //Если id в массиве совпало с искомым id, значит мы нашли нужный нам объект
-                    return {...item, [prop]: !item[prop]} //На этом этапе возвращаем новый объек, который имеет в себе измененное свойство increase
+            data: data.map(item => { 
+                if (item.id === id) { 
+                    return {...item, [prop]: !item[prop]} 
                 }
-                return item; // Если предыдущее условие не совпало, то мы просто возвращаем этот объект
+                return item; 
             })
         }))
     }
@@ -65,7 +65,7 @@ export default class App extends Component {
             return items;
         }
         return items.filter(item => {
-            return item.name.indexOf(term) > -1 //поиск совпадений в строке как при применении ctrl+f
+            return item.name.indexOf(term) > -1 
         })
     }
 
@@ -93,7 +93,7 @@ export default class App extends Component {
         const {data, term, filter} = this.state;
         const employees = this.state.data.length;
         const increased = this.state.data.filter(item => item.increase).length;
-        const visibleData = this.filterPost(this.searchEmp(data, term), filter);//Данные проходят двойную фильтрацию: по поиску и по фильтру.
+        const visibleData = this.filterPost(this.searchEmp(data, term), filter);
         
         return (
             <div className="app">
